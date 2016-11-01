@@ -1,0 +1,297 @@
+규칙
+    - 0은 사용 안함 (또는 1은 사용함)
+
+
+attribute-quotes.md
+    속성은 따옴표로 감싸는게 좋은듯.
+    span[class^=main] 보다
+    span[class^="main"]
+url-quotes.md
+    url도  따옴표로 감싸는게 좋은듯.
+    background-image: url(bar/ + $foo); 보다
+    background-image: url("bar/" + $foo);
+quotes.md
+    속성, url과 같게 쌍따옴표 사용.
+
+bem-depth.md
+    제한할 필요 없어 보임
+
+border-zero.md
+    0값이 경우 숫자보다 none 사용하는 것이 좋은 방법이라고 알고 있음.
+
+brace-style.md
+    style: '1tbs'
+    allow-single-line: false
+    이 방식이 작업에 익숙한 방법 같음.
+
+class-name-format.md
+    1
+    클래스 이름 규칙
+
+clean-import-paths.md
+    1
+    @import 불러오는 규칙
+
+empty-args.md
+    include: false
+    인자가 비어있다면 () 생략 가능.
+
+empty-line-between-blocks.md
+    include: true
+    블록 사이에 빈줄이 있어야 함
+
+extends-before-declarations.md
+    1
+    @extend 사용이 내용보다 먼저 사용
+
+extends-before-mixins.md
+    1
+    @extend 가 @include보다 먼저 사용
+
+final-newline.md
+    0
+    파일 마지막에 빈줄 허용(할거면 1, 안할거면 0)
+
+force-attribute-nesting.md
+    0
+    속성선택자 상속(중첩) 적용(할거면 1, 안할거면 0)
+
+force-element-nesting.md
+    0
+    태그 선택자 상속(중첩) 사용(할거면 1, 안할거면 0)
+
+force-pseudo-nesting.md
+    0
+    가상 선택자 상속(중첩) 사용(할거면 1, 안할거면 0)
+    ??줄바꿈이 필요없는 상태에서 일부러 구분하기 위해서 줄바꿈을 해서 얻어지는건 무엇인가?
+
+function-name-format.md
+    1
+    함수 이름은 카멜방식으로 하는게 일반 클래스와 구분도 가고 하지 않을까 하는데...
+    allow-leading-underscore: false
+    언더바는 사용 안하는 옵션 선택
+
+hex-length.md
+    1
+    style: short
+    줄여 쓸수 있는 색상은 짧게 쓰는게 나을듯
+
+hex-notation.md
+    1
+    style: lowercase
+    소문자로 쓰는게 익숙
+
+id-name-format.md
+    0
+    id 선택자 사용은 하지 않는데 규칙이 필요 있을까 싶다.
+
+indentation.md
+    1
+    size:tab
+
+leading-zero.md
+    include: false (defaults to false)
+    소수점 앞에 있는 0을 안쓰는게 좋은 방법이라 알고 있음. 증거를 찾아야 겠음.
+
+mixin-name-format.md
+    1
+    allow-leading-underscore: true
+    convention: hyphenatedlowercase(default)
+
+mixins-before-declarations.md
+    0
+    @include 선언이 내용보다 우선
+
+nesting-depth.md
+    0
+    중첩 깊이를 제한 할 필요가 있나???
+
+no-attribute-selectors.md
+    0
+    속성 선택자 사용은 가능해야 하지 않을까~
+    no-attribute-selectors은 활성화 되면 안될듯
+
+no-color-hex.md
+    0
+    no-color-hex 비활성화 해야 할듯
+    색상사용시 핵사코드를 사용안하면 어찌
+
+no-color-keywords.md
+    0
+    no-color-keywords 비활성화 해야 할듯
+    임시 테스트시 색상을 키워드로 넣는 경우가 있는데 이걸 막으면 안될듯.
+
+no-color-literals.md
+    ??
+
+no-combinators.md
+    0
+    연결 선택자 사용을 지양하더라도 막을 필요는 없지(>, +, ~ 등)
+
+no-css-comments.md
+    1
+    주석 스타일을 가이드
+
+
+no-debug.md
+    ??
+    @debug 지시어는 오류를 감지하고 표준 에러 출력 스트림에 SassScript 식의 값을 표시합니다.
+    ??
+
+no-disallowed-properties.md
+    0
+    ?? 허용하지 않고, 사용하지 않을 속성이 있나?
+
+no-duplicate-properties.md
+    0
+    속성값을 덮어쓰고 할텐데, 영향 없나?
+
+no-empty-rulesets.md
+    1
+    내용이 비어있는 선택자는 결국 필요없긴 하니까 정리
+
+no-extends.md
+    0
+    extend를 연달아 쓸 경우 문제가 있나? 없다면 필요없지 싶은데
+
+no-ids.md
+    0
+    id 선택자를 사용하지 않더라도 특수한 경우를 위해서 막을 필요는 없지
+
+no-important.md
+    0
+    important 사용을 지양하기는 하지만 막기엔 추후 문제가 있지 않을까
+
+no-invalid-hex.md
+    1
+    잘못넣은 색상 코드 잡아준다는데 써도 될듯~
+
+no-mergeable-selectors.md
+    ??
+    중복된 선택자....@extend 사용하면 나오는거 아닌가? @extend와는 별개인가? 별개면 활성화해도 문제 없지~
+
+no-misspelled-properties.md
+    1
+    철자가 틀리면 작업시 원래 오류 나는거 아님? 오류 났다고 알려주는거니까 좋은건가.
+
+no-qualifying-elements.md
+    ??
+    기본값 false 가 허용하지 않는것.
+
+no-trailing-whitespace.md
+    ?? 공백을 후행하는 것은 허용되지 않음 ??
+
+no-trailing-zero.md
+    1
+    생략해도 되는 0값은 생략
+
+no-transition-all.md
+    ??
+    ?? transition에서 all ??
+
+no-universal-selectors.md
+    1
+    * 선택자는 사용 안하는게 좋지
+
+no-url-protocols.md
+    0
+    ??링크 방법까지 정해야 하나? 필요없어 보임
+
+no-vendor-prefixes.md
+    ??
+
+no-warn.md
+    ??
+    ??@warn 지시문이 문제에 대한 주의 조언을 제공하는 데 사용
+    허용하면 @warn 사용 안하겠다는 것임
+
+one-declaration-per-line.md
+    1
+    한 줄에 속성 하나
+
+placeholder-in-extend.md
+    ??
+    ??
+
+placeholder-name-format.md
+    ??
+    ??기호가 이름 앞에옴?
+
+property-sort-order.md
+    0
+    속성 규직이 include와 extend등을 사용하는데 규칙 어긋남이 있을것 같은데...영향 없나?
+
+property-units.md
+    ??
+    단위
+
+pseudo-element.md
+    1
+    .foo:hover {
+    가상 클래스(pseud0-class)는 :  출처) https://developer.mozilla.org/ko/docs/Web/CSS/Pseudo-classes
+    .foo::before {
+    가상 요소(pseudo-element) :: 출처)https://developer.mozilla.org/ko/docs/Web/CSS/pseudo-elements
+
+shorthand-values.md
+    1
+    속성값 1, 2, 3
+
+single-line-per-selector.md
+    1
+    하나의 선택자당 한줄씩.
+
+space-after-bang.md
+    0
+    활성화 시킬 이유는 뭐지? 활성화 시킬 이유를 모르겠어서 비활성화 선택(0)
+    include: false !다음에 빈칸 없이 !important 로 쓰이는게 맞는것 아님?
+
+space-after-colon.md
+    1
+    콜론 뒤에 공간
+    속성: 스타일;
+
+space-after-comma.md
+    1
+    콤마 뒤에 공간
+    @include(arg1, arg2)
+
+space-around-operator.md
+    1
+    연산자(기호)의 앞뒤로 공간을 두는것이 보기에 편하지
+
+space-before-bang.md
+    1
+    !important 앞에 여백 있음.
+
+space-before-brace.md
+    1
+    선택자와 { 사이에 빈 공간 있는게 보기 편하지
+    선택자 {
+
+space-before-colon.md
+    1
+    보기 편하다는 의미에서 같음
+
+space-between-parens.md
+    1
+    bar( $baz )역시 같은 의미에서 빈 공간 있는게 편하지 않나?
+
+trailing-semicolon.md
+    1
+    세미콜론은 찍어주는게 좋지
+
+variable-for-property.md
+    0
+    불필요하므로 비활성
+    값을 변수로만 사용하는 옵션??
+
+
+variable-name-format.md
+    1
+    allow-leading-underscore: true
+    convention: hyphenatedlowercase
+    변수 이름 규칙
+
+zero-unit.md
+    include: false
+    0px과 같이 단위 쓰는게 익숙하므로
