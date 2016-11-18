@@ -1,0 +1,5 @@
+@media \0screen {
+	.class{
+		border-top:1px solid red;
+	}
+}
