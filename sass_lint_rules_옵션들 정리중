@@ -17,7 +17,7 @@ bem-depth.md
     제한할 필요 없어 보임
 
 border-zero.md
-    0값이 경우 숫자보다 none 사용하는 것이 좋은 방법이라고 알고 있음.
+    값이 0인 경우 숫자를 사용하는 것보다 none 사용하는 것이 좋은 방법이라고 알고 있음.
 
 brace-style.md
     style: '1tbs'
