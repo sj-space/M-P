@@ -1,0 +1,47 @@
+<div style="width: 200px;margin: 10px auto;text-align: center">
+  <strong style="display: block">PX → REM</strong>
+  <input type="number" class="input-px" style="width: 60px; margin-right: 3px;text-align: right;">px
+<!--  /<span style="margin: 0 3px">16px</span>-->
+  /<input type="number" class="input-root" value="16" style="width: 35px; margin:0 3px;text-align: center;">px
+  =<span id="resultREM" style="margin-left: 3px">0</span>rem
+</div>
+<hr>
+<div style="width: 200px;margin: 10px auto;text-align: center">
+  <strong style="display: block">REM → PX</strong>
+  <input type="number" class="input-rem" style="width: 60px; margin-right: 3px;text-align: right;">rem *<span style="margin: 0 3px">16px</span>=<span id="resultPX" style="margin-left: 3px">0</span>px
+</div>
+
+<script>
+(function () {
+  // PX → REM
+  // px / html font-size = rem
+  const input = document.querySelector('.input-px');
+  const root = document.querySelector('.input-root');
+  const result = document.getElementById('resultREM');
+  input.addEventListener('input', updateValue);
+
+  function updateValue(e) {
+    const rootValue = Number(root.value) || 16;
+    const value = e.target.value / rootValue;
+    // result.textContent = value.toFixed(3);
+    result.textContent = value;
+  }
+})()
+</script>
+<script>
+(function () {
+  // REM → PX
+  // rem * html font-size = px
+  const input = document.querySelector('.input-rem');
+  console.log(input);
+  const result = document.getElementById('resultPX');
+
+  input.addEventListener('input', updateValue);
+
+  function updateValue(e) {
+    const value = e.target.value * 16;
+    result.textContent = value;
+  }
+})()
+
+</script>
